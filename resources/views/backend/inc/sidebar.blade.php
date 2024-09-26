@@ -4,7 +4,7 @@
         <ul class="navbar-item theme-brand flex-row  text-center">
             <li class="nav-item theme-logo">
                 <a href="index.html">
-                    <img src="assets/img/logo.png" class="navbar-logo" alt="logo">
+                    <img src="{{ asset('backend/assets/img/logo.png') }}" class="navbar-logo" alt="logo">
                 </a>
             </li>
             <li class="nav-item theme-text">
@@ -13,33 +13,13 @@
         </ul>
         <ul class="list-unstyled menu-categories" id="accordionExample">
             <li class="menu">
-                <a href="#dashboard" data-active="true" data-toggle="collapse" aria-expanded="true"
+                <a href="" data-active="true" data-toggle="collapse" aria-expanded="true"
                     class="dropdown-toggle">
                     <div class="">
                         <i class="las la-home"></i>
                         <span>Dashboards</span>
                     </div>
-                    <div>
-                        <i class="las la-angle-right sidemenu-right-icon"></i>
-                    </div>
                 </a>
-                <ul class="collapse submenu list-unstyled collapse show" id="dashboard" data-parent="#accordionExample">
-                    <li>
-                        <a href="index.html"> Dashboard 1 </a>
-                    </li>
-                    <li>
-                        <a href="index-2.html"> Dashboard 2 </a>
-                    </li>
-                    <li>
-                        <a href="index-3.html"> Dashboard 3 </a>
-                    </li>
-                    <li class="active">
-                        <a data-active="true" href="index-4.html"> Dashboard 4 </a>
-                    </li>
-                    <li>
-                        <a href="index-5.html"> Dashboard 5 </a>
-                    </li>
-                </ul>
             </li>
             <li class="menu">
                 <a href="#app" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">

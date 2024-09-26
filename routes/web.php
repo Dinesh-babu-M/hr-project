@@ -25,11 +25,17 @@ Route::controller(LoginController::class)->group(function () {
     Route::post('/login', [LoginController::class, 'login']);
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+    Route::middleware('auth')->group(function () {
+        Route::get('/super-admin/dashboard', [LoginController::class, 'SuperAdminDashboard'])->name('SuperAdminDashboard');
+        Route::get('/admin/dashboard', [LoginController::class, 'AdminDashboard'])->name('AdminDashboard');
+    });
+
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

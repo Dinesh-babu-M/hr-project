@@ -340,13 +340,18 @@
                                     </div>
                                 </a>
                                 <hr class="account-divider">
-                                <a class="account-item" href="auth_login_3.html">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
+                                <a class="account-item" href="log-out"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <div class="media align-center">
                                         <div class="icon-wrap">
                                             <i class="las la-sign-out-alt font-20"></i>
                                         </div>
                                         <div class="media-content ml-3">
-                                            <h6 class="font-13 mb-0 strong ">Logout</h6>
+                                            <h6 class="font-13 mb-0 strong">Logout</h6>
                                         </div>
                                     </div>
                                 </a>
