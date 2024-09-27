@@ -14,7 +14,7 @@
         </ul>
         <ul class="list-unstyled menu-categories" id="accordionExample">
             <li class="menu">
-                <a href="{{ url('/super-admin/dashboard') }}" class="dropdown-toggle {{ isActiveRoute('/super-admin/dashboard') }}">
+                <a href="{{ url('/super-admin/dashboard') }}" class="dropdown-toggle {{ isActiveRoute('super-admin/dashboard') }}">
                     <div class="">
                         <i class="las la-home"></i>
                         <span>Dashboards</span>
@@ -23,7 +23,7 @@
             </li>
             <li class="menu-title">Client</li>
             <li class="menu">
-                <a href="{{ url('/super-admin/create-client') }}" class="dropdown-toggle {{ isActiveRoute('/super-admin/create-client') }}">
+                <a href="" class="dropdown-toggle {{ isActiveRoute('roles/create') }}">
                     <div class="">
                         <i class="las la-desktop"></i>
                         <span>Create Role</span>

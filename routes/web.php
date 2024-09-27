@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,14 @@ Route::controller(LoginController::class)->group(function () {
         Route::get('/admin/dashboard', [LoginController::class, 'AdminDashboard'])->name('AdminDashboard');
     });
 
+});
+
+
+Route::controller(ClientController::class)->group(function () {
+    Route::middleware('auth')->group(function () {
+        Route::get('/super-admin/create-client', [ClientController::class, 'CreateClients'])->name('CreateClients');
+        Route::post('/super-admin/create-client', [ClientController::class, 'ClientStore'])->name('clients.store');
+    });
 });
 
 
